@@ -113,7 +113,7 @@ function addNewEngineer() {
         <div class="card-header">${newEngineer.name}</div>
         <div class="card-body text-primary">
           <h5 class="card-title">${newEngineer.getRole()}</h5>
-          <p class="card-text">Id: ${newEngineer.id} <br> Email: ${newEngineer.email} <br> Office:  ${newEngineer.GitHub}</p>
+          <p class="card-text">Id: ${newEngineer.id} <br> Email: ${newEngineer.email} <br> GitHub:  ${newEngineer.github}</p>
         </div>
       </div>`
         console.log(newEngineer);
@@ -154,7 +154,7 @@ function addNewIntern() {
         <div class="card-header">${newIntern.name}</div>
         <div class="card-body text-primary">
           <h5 class="card-title">${newIntern.getRole()}</h5>
-          <p class="card-text">Id: ${newIntern.id} <br> Email: ${newIntern.email} <br> Office:  ${newIntern.school}</p>
+          <p class="card-text">Id: ${newIntern.id} <br> Email: ${newIntern.email} <br> School:  ${newIntern.school}</p>
         </div>
       </div>`
         console.log(newIntern);
