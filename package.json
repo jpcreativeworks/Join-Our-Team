@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jpcreativeworks/Join-Our-Team#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "inquirer": "^8.2.2",
+    "jest": "^27.5.1"
   }
 }
