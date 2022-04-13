@@ -1,0 +1,23 @@
+{
+  "name": "join-our-team",
+  "version": "1.0.0",
+  "description": "Team-Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpcreativeworks/Join-Our-Team.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpcreativeworks/Join-Our-Team/issues"
+  },
+  "homepage": "https://github.com/jpcreativeworks/Join-Our-Team#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
