@@ -5,7 +5,7 @@ const Intern = require("./library/Intern");
 const Manager = require("./library/Manager");
 let managerHTML = "";
 let internHTML = "";
-let engieerHTML = "";
+let engineerHTML = "";
 
 function requestingManager() {
     inquirer.prompt([
@@ -109,7 +109,7 @@ function addNewEngineer() {
             engineerInput.engineerGitHub
         );
 
-        engineerHTML = `<div class="card border-primary mb-3" style="max-width: 18rem;">
+        engineerHTML+= `<div class="card border-primary mb-3" style="max-width: 18rem;">
         <div class="card-header">${newEngineer.name}</div>
         <div class="card-body text-primary">
           <h5 class="card-title">${newEngineer.getRole()}</h5>
@@ -150,7 +150,7 @@ function addNewIntern() {
             internInput.internSchool
         );
 
-        internHTML = `<div class="card border-primary mb-3" style="max-width: 18rem;">
+        internHTML += `<div class="card border-primary mb-3" style="max-width: 18rem;">
         <div class="card-header">${newIntern.name}</div>
         <div class="card-body text-primary">
           <h5 class="card-title">${newIntern.getRole()}</h5>
@@ -164,4 +164,51 @@ function addNewIntern() {
 
 function addExit() {
     console.log('finished!')
+    var completeHTML = `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Join Our Team</title>
+</head>
+<body>
+    <header class="class navBar"> Join our team!</header>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#cards">Home</a>
+            </li>
+            
+            <li class="nav-item"> 
+                <a class="nav-link active" aria-current="page" href="#instructions">Instructions</a>
+            </li>
+        </ul>
+    
+    <main class="container">
+    ${managerHTML}
+    ${internHTML}
+    ${engineerHTML}
+
+        <div id="cards" class="row">
+            <div class="column">
+                <div class="class card"></div>
+                <div class="class card"></div>
+                <div class="class card"></div>
+            </div>
+        </div>
+       
+    </main>
+    <footer> <p id="instructions">
+    this is where some instructions will go. 
+    </p>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+    `
+    fs.writeFileSync('index.html', completeHTML, function(err) {
+        if (err) throw err;
+    });
 };
