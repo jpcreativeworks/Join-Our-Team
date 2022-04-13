@@ -1,6 +1,21 @@
-const express = require("express");
-const app = express();
-const PORT = process.env.PORT || 3000;
+class Employee{
+    constructor(name,id,email){
+        this.name = name
+        this.id = id
+        this.email = email
+    }
+    getName(){
+        return this.name
+    }
+    getId(){
+        return this.id
+    }
+    getEmail(){
+        return this.email
+    }
+    getRole(){
+        return "Employee"
+    }
+}
 
-app.use(express.jason());
-app.use(express.urlencoded ({ extended: true}))
+module.exports = Employee;
