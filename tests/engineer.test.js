@@ -30,5 +30,5 @@ test('testing the get email', function() {
 })
 test('testing the get github', function() {
     let newEngineer = new Engineer ('Jane','123id','Jane@email.com','https://github.com/user/janedoe123');
-    expect (newEngineer. getGitHub()).toBe('https://github.com/user/janedoe123');
+    expect (newEngineer.getGitHub()).toBe('https://github.com/user/janedoe123');
 })
