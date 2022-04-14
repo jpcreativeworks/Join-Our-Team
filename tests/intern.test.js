@@ -28,7 +28,7 @@ test('testing the get email', function() {
    let newIntern = new Intern ('Jane','123id','Jane@email.com');
    expect (newIntern.getEmail()).toBe('Jane@email.com');
 })
-test('testing the get github', function() {
+test('testing the get school', function() {
     let newIntern = new Intern ('Jane','123id','Jane@email.com','Web School University');
     expect (newIntern.getSchool()).toBe('Web School University');
 })
